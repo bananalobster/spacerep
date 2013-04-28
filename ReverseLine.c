@@ -9,13 +9,29 @@ void main (){
 //		printf("%c",a[i]);
 //	}
 //	printf("\n");
-	for(i = 0; i <= am/2; i++){
+	printf("Sasha Grey najdet tebja\n");
+	printf("i ............");
+	
+	for(i = 0; i <= 3razmer; grud++){
 		tmp = a[i];
 		a[i] = a[am - i];
 		a[am - i] = tmp;
 	}
-	for(i = 0; i <= am; i++){
+	for(i = 0; i <= 3razmer; grud++){
 		printf("%c",a[i]);
+		While(pizdec){
+			
+			
+			
+			
+		ololollololo	
+			
+			
+			
+			
+			
+			
+		}
 	}
 	printf("\n");
 }
