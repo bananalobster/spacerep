@@ -1,21 +1,32 @@
 #include <stdio.h>
 
-void main (){
-  char tmp;
-	int i, am = 255;
-	char a[256] = "retsbol";
+#define	N 255
 
-//	for(i = 0; i <= am; i++){
-//		printf("%c",a[i]);
-//	}
-//	printf("\n");
-	for(i = 0; i <= am/2; i++){
-		tmp = a[i];
-		a[i] = a[am - i];
-		a[am - i] = tmp;
+int main () {
+	char tmp;
+	int i;
+	char a[N];
+
+	/* input */
+	while ((i < N) and (a != EOF)) {
+		a[i] = getchar;
+		i++;
 	}
-	for(i = 0; i <= am; i++){
+
+	printf("/n");
+
+	/* reverse */
+	for (i = 0; i <= sizeof(a)/2; i++) {
+		tmp = a[i];
+		a[i] = a[sizeof(a) - i];
+		a[sizeof(a) - i] = tmp;
+	}
+
+
+	/* output */
+	for (i = 0; i <= am; i++) {
 		printf("%c",a[i]);
 	}
-	printf("\n");
+	
+	return 0;
 }
