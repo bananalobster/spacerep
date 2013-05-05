@@ -16,7 +16,7 @@ int main () {
 	printf("\n");
 
 	/* reverse */
-	for (i = 1; i <= sizeof(a)/2; i++) {
+	for (i = 0; i <= sizeof(a)/2; i++) {
 		tmp = a[i];
 		a[i] = a[sizeof(a) - i];
 		a[sizeof(a) - i] = tmp;
@@ -24,7 +24,7 @@ int main () {
 
 
 	/* output */
-	for (i = 0; i <= sizeof(a); i++) {
+	for (i = 1; i <= sizeof(a); i++) {
 		printf("%c",a[i]);
 	}
 
