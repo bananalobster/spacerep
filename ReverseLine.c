@@ -1,22 +1,22 @@
 #include <stdio.h>
 
-#define	N 255
+#define N 5
 
 int main () {
 	char tmp;
-	int i;
-	char a[N];
+	int i = 1;
+	char a[] = "retsbol";
 
 	/* input */
-	while ((i < N) and (a != EOF)) {
-		a[i] = getchar;
-		i++;
-	}
+//	while (i < N) {
+//		a[i] = getchar;
+//		i++;
+//	}
 
-	printf("/n");
+	printf("\n");
 
 	/* reverse */
-	for (i = 0; i <= sizeof(a)/2; i++) {
+	for (i = 1; i <= sizeof(a)/2; i++) {
 		tmp = a[i];
 		a[i] = a[sizeof(a) - i];
 		a[sizeof(a) - i] = tmp;
@@ -24,9 +24,10 @@ int main () {
 
 
 	/* output */
-	for (i = 0; i <= am; i++) {
+	for (i = 0; i <= sizeof(a); i++) {
 		printf("%c",a[i]);
 	}
-	
+
+	printf("\n");
 	return 0;
 }
