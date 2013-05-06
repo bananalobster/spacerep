@@ -4,7 +4,7 @@
 
 int main () {
 	char tmp;
-	int len = 0, i = 0, e = 1;
+	int len = 0, i, e = 1;
 	char a[N];
 
 	/* input */
@@ -20,10 +20,10 @@ int main () {
 
 
 	/* reverse */
-	for (i = 0; i <= len/2; i++) {
+	for (i = 0; i < len/2; i++) {
 		tmp = a[i];
-		a[i] = a[len - i];
-		a[len - i] = tmp;
+		a[i] = a[len - i - 1];
+		a[len - i - 1] = tmp;
 	}
 
 
