@@ -1,30 +1,34 @@
 #include <stdio.h>
 
-#define N 5
+#define N 255
 
 int main () {
 	char tmp;
-	int i = 1;
-	char a[] = "retsbol";
+	int len = 0, i = 0, e = 1;
+	char a[N];
 
 	/* input */
-//	while (i < N) {
-//		a[i] = getchar;
-//		i++;
-//	}
+	scanf("%s", a);
+
+	/* length */
+	do {
+		len++;
+	} while (a[len]*e > 13);
 
 	printf("\n");
+//	printf("%d  ", len);
+
 
 	/* reverse */
-	for (i = 0; i <= sizeof(a)/2; i++) {
+	for (i = 0; i <= len/2; i++) {
 		tmp = a[i];
-		a[i] = a[sizeof(a) - i];
-		a[sizeof(a) - i] = tmp;
+		a[i] = a[len - i];
+		a[len - i] = tmp;
 	}
 
 
 	/* output */
-	for (i = 1; i <= sizeof(a); i++) {
+	for (i = 0; i < len; i++) {
 		printf("%c",a[i]);
 	}
 
