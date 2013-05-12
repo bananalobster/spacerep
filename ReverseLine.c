@@ -8,16 +8,15 @@ int main () {
 	char a[N];
 
 	/* input */
-	scanf("%s", a);
+	scanf("%s", &a);
 
 	/* length */
 	do {
 		len++;
 	} while (a[len]*e > 13);
 
-	printf("\n");
-//	printf("%d  ", len);
-
+//	printf("\n");
+//	printf("%d ", len);
 
 	/* reverse */
 	for (i = 0; i < len/2; i++) {
@@ -25,7 +24,6 @@ int main () {
 		a[i] = a[len - i - 1];
 		a[len - i - 1] = tmp;
 	}
-
 
 	/* output */
 	for (i = 0; i < len; i++) {
