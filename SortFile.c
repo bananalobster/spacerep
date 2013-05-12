@@ -4,7 +4,7 @@
 
 int main(){
 	FILE * f;
-	int len = 0, fl, q, tmp, a[N];
+	int len = -1, fl, q, tmp, a[N];
 
 	/* open file */
 	f = fopen("text.txt","r");
@@ -18,6 +18,11 @@ int main(){
 		}
 		fclose(f);
 	}
+
+	/* check input */
+//	for (q = 0; q <= len; q++){
+//		printf("%d\n", a[q]);
+//	}
 
 	/* sort */
 	do{
@@ -34,7 +39,7 @@ int main(){
 
 	/* rewrite file */
 	f = fopen("text.txt","w");
-	for (q = 1; q <= len-1; q++){
+	for (q = 0; q <= len-1; q++){
 		fprintf(f, "%d\n", a[q]);
 	}
 	fprintf(f, "%d", a[len]);
