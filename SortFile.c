@@ -39,11 +39,14 @@ int main(){
 
 	/* rewrite file */
 	f = fopen("text.txt","w");
-	for (q = 0; q <= len-1; q++){
-		fprintf(f, "%d\n", a[q]);
+	if (f == NULL) perror("Error writting to file");
+	else{
+		for (q = 0; q <= len-1; q++){
+			fprintf(f, "%d\n", a[q]);
+		}
+		fprintf(f, "%d", a[len]);
+		fclose(f);
 	}
-	fprintf(f, "%d", a[len]);
-	fclose(f);
 
 	printf("Sort completed\n");
 	return 0;
