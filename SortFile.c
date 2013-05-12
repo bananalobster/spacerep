@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define  N 256
+#define	N 256
 
 int main(){
 	FILE * f;
@@ -22,7 +22,7 @@ int main(){
 	/* sort */
 	do{
 		fl = 0;
-		for (q = 1; q<= len; q++){
+		for (q = 0; q < len; q++){
 			if (a[q] < a[q+1]){
 				fl = 1;
 				tmp = a[q];
@@ -34,9 +34,10 @@ int main(){
 
 	/* rewrite file */
 	f = fopen("text.txt","w");
-	for (q = 1; q <= len; q++){
+	for (q = 1; q <= len-1; q++){
 		fprintf(f, "%d\n", a[q]);
 	}
+	fprintf(f, "%d", a[len]);
 	fclose(f);
 
 	printf("Sort completed\n");
