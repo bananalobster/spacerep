@@ -8,7 +8,7 @@ int main(){
 	char a[N];
 
 	/* input */
-	scanf("%s", a);
+	scanf("%s", &a);
 
 	/* length */
 	do {
