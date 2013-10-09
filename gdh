@@ -1,0 +1,15 @@
+  else begin
+    p := 2*dx - dy;
+    for i:= 0 to dy do begin
+      if (p>0) then begin
+        x:= x + ix;
+        y:= y + iy;
+        p:= p + 2*dx - 2*dy;
+      end
+      else begin
+        y:= y + iy;
+        p:= p + 2*dx;
+      end;
+      Image1.Canvas.Pixels[x0+x,y0+y] := clBlack;
+    end;
+  end;
